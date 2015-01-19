@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+     
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Mailbox</title>
+        <link rel="stylesheet" type="text/css" href="css/topcoat-mobile-dark.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <script src="cordova.js"></script>
+    </head>
+     
+    <body>
+        <div class="topcoat-navigation-bar">
+            <div class="topcoat-navigation-bar__item left quarter">
+                <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button">
+                    <span class="topcoat-icon topcoat-icon--menu-stack"></span>
+                </a>
+            </div>
+            <div class="topcoat-navigation-bar__item center half">
+                <h1 class="topcoat-navigation-bar__title">Mailbox</h1>
+            </div>
+            <div class="topcoat-navigation-bar__item right quarter">
+                <button class="topcoat-button--cta"></button>
+            </div>
+        </div>
+        <nav class="side-nav">
+            <div class="topcoat-list__container side-nav__list__container">
+                <ul class="topcoat-list side-nav__list">
+                    <li class="topcoat-list__item side-nav__list__item">
+                        <a href="#" class="side-nav__button">Inbox</a>
+                    </li>
+                    <li class="topcoat-list__item side-nav__list__item is-active">
+                        <a href="#" class="side-nav__button">Sent</a>
+                    </li>
+                    <li class="topcoat-list__item side-nav__list__item">
+                        <a href="#" class="side-nav__button">Drafts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="topcoat-list__container">
+                <ul class="topcoat-list list" id="messages-list"></ul>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            app.initialize();
+        </script>
+    </body>
+ 
+</html>
