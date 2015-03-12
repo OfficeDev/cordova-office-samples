@@ -60,9 +60,9 @@ var app = {
         var authUrl = 'https://login.windows.net/common/';
         var redirectUrl = 'http://localhost:4400/services/office365/redirectTarget.html';
 
-        var authContext = new O365Auth.Context(authUrl, redirectUrl);
+        var authContext = new Microsoft.ADAL.AuthenticationContext(authUrl);
 
-        app.outlookClient = new Microsoft.OutlookServices.Client(officeEndpointUrl, authContext.getAccessTokenFn(resourceUrl, '', appId));
+        app.outlookClient = new Microsoft.OutlookServices.Client(officeEndpointUrl, authContext, resourceUrl, appId, redirectUrl);
         app.loadMessages('Inbox');
     },
 
